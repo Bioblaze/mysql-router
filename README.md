@@ -34,6 +34,74 @@ Example Project: <In Development>
 
 ## Usage of Mysql Router
 
+### Configure
+
+#### Config Options
+
+##### Without SSL
+```javascript
+var mysql = require('mysql-router');
+mysql.StartPool({
+  connectionLimit: 100,
+  host: "127.0.0.1",
+  post: 3306,
+  user: "test",
+  password: "test",
+  database: "test",
+  charset: "utf8mb4", // Note: This is very Specific to Discord. Just saying.
+});
+```
+
+##### With SSL
+```javascript
+var mysql = require('mysql-router');
+var fs = require('fs');
+var path = require('path');
+mysql.StartPool({
+  connectionLimit: 100,
+  host: "127.0.0.1",
+  post: 3306,
+  user: "test",
+  password: "test",
+  database: "test",
+  charset: "utf8mb4", // Note: This is very Specific to Discord. Just saying.
+  ssl: {
+    ca: fs.readFileSync(path.join(__dirname, 'ssl', 'server-ca.pem')),
+    key: fs.readFileSync(path.join(__dirname, 'ssl', 'client-key.pem')),
+    cert: fs.readFileSync(path.join(__dirname, 'ssl', 'client-cert.pem'))
+  }
+});
+```
+
 ## Issue
 
+If any Issues Please Submit them on the Github!
+
 ## Example
+
+### /index.js
+```javascript
+var mysql = require('mysql-router');
+var util = require('util');
+mysql.StartPool({
+  connectionLimit: 100,
+  host: "127.0.0.1",
+  post: 3306,
+  user: "test",
+  password: "test",
+  database: "test",
+  charset: "utf8mb4", // Note: This is very Specific to Discord. Just saying.
+});
+
+mysql.Query(`CREATE TABLE Persons (
+    PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);`, []).then((d) => {
+  console.log(`Data from Query: ${${util.inspect(d, false, null)}}`);
+}).catch((e) => {
+  console.log(${util.inspect(e, false, null)});
+})
+```
