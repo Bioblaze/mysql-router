@@ -1,7 +1,7 @@
 {
   "name": "mysql-router",
-  "version": "0.1.4",
-  "description": "This is a Database Handler for Discord.js-Router. This allows for easy access across all Plugins within a Discord Bot or a Bot Framework without wasting memory.",
+  "version": "0.0.1",
+  "description": "This is a Database Router. This allows for easy access across all Plugins/Files within a Bot or Framework without wasting memory.",
   "main": "./lib/index.js",
   "homepage": "https://github.com/Bioblaze/mysql-router/",
   "keywords": [
@@ -34,7 +34,6 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "eventemitter2": "^5.0.1",
     "moment": "^2.24.0",
     "mysql": "^2.17.1"
   },

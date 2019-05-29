@@ -20,7 +20,17 @@ Mysql is a trademark or registered trademark of Oracle Corporation in the U.S. a
 $ npm install mysql-router
 ```
 
-## information
+## Information
+
+Documentation on Object Class Structure & Functions can be found at the Official [Github Pages](https://bioblaze.github.io/mysql-router/)
+
+Tutorials, Guides, and More can be Found at the Official [Github Wiki](https://github.com/Bioblaze/mysql-router/wiki)
+
+If any information is Lacking please Post a Question in the [Github Issues](https://github.com/Bioblaze/mysql-router/issues) Section.
+
+Example Code: <TBA>
+
+Example Project: <In Development>
 
 ## Usage of Mysql Router
 
