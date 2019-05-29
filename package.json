@@ -1,0 +1,56 @@
+{
+  "name": "mysql-router",
+  "version": "0.1.4",
+  "description": "This is a Database Handler for Discord.js-Router. This allows for easy access across all Plugins within a Discord Bot or a Bot Framework without wasting memory.",
+  "main": "./lib/index.js",
+  "homepage": "https://github.com/Bioblaze/mysql-router/",
+  "keywords": [
+    "mysql",
+    "router",
+    "bot",
+    "database"
+  ],
+  "maintainers": [
+    {
+      "name": "Bioblaze Payne",
+      "email": "BioblazePayne@gmail.com",
+      "web": "https://BioblazePayne.site/"
+    }
+  ],
+  "author": {
+    "name": "Bioblaze Payne",
+    "email": "BioblazePayne@gmail.com",
+    "url": "https://BioblazePayne.site/"
+  },
+  "bugs": {
+    "web": "https://github.com/Bioblaze/mysql-router/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bioblaze/mysql-router.git"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "eventemitter2": "^5.0.1",
+    "moment": "^2.24.0",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {
+    "semantic-release": "^15.9.9",
+    "travis-deploy-once": "^5.0.2"
+  },
+  "scripts": {
+    "gendocs": "documentation build ./lib/index.js -f html -o ./docs/",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
+  },
+  "publishConfig": {
+    "tag": "latest"
+  },
+  "release": {
+    "branch": "master"
+  }
+}
